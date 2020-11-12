@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
-ENV IN_PATH
-ENV OUT_PATH
+ARG IN_PATH
+ARG OUT_PATH
 
 ADD script.sh /script.sh
 RUN chmod +x /script.sh
