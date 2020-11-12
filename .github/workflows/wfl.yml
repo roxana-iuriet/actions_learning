@@ -12,7 +12,7 @@ jobs:
     name: A job to test
     steps:
       - name: create a file
-        run: mkdir in && echo 'some test to write' > ${{env.IN_PATH}}
+        run: mkdir in && mkdir out && echo 'some test to write' > ${{env.IN_PATH}}
       - name: chckout code
         uses: actions/checkout@v2
       - name: test action
