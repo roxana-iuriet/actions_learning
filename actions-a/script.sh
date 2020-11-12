@@ -1,5 +1,5 @@
 #!/bin/bash
 
-mkdir $2
+#mkdir out
 echo "Hello world"
-cat $1/text.txt > $2/text2.txt
+cat $1 > $2
