@@ -11,4 +11,4 @@ jobs:
         id: hello
         uses: ./actions-a
         with:
-          - first_value: 'first test'
+          first_value: 'first test'
