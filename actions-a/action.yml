@@ -14,4 +14,4 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.in_path }}
-    - - ${{ inputs.out_path }}
+    - ${{ inputs.out_path }}
