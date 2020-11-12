@@ -19,5 +19,5 @@ jobs:
         id: hello
         uses: ./actions-a
         with:
-          in_path: ${{env.IN_PATH}}
+          in_path: ${{github.workspace}}/${{env.IN_PATH}}
           out_path: ${{env.OUT_PATH}}
