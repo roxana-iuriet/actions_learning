@@ -1,5 +1,6 @@
 #!/bin/bash
 
-#mkdir out
+mkdir out
 echo "Hello world"
 cat $1 > $2
+cat $2
