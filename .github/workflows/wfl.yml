@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to test
     steps:
+      - name: chckout code
+        uses: actions/checkout@v2
       - name: test action
         id: hello
         uses: ./actions-a
