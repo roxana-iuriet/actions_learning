@@ -1,0 +1,13 @@
+name: 'Hello'
+description: 'My first action'
+
+inputs:
+  first_value:
+    description: 'First input value'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.first_value }}

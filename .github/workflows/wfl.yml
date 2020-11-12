@@ -1,0 +1,11 @@
+name: test action
+on:
+  push
+
+jobs:
+  my_first_job:
+    runs-on: ubuntu:latest
+    id: hello
+    uses: ./actions-a
+    with:
+      first_value: 'first test'
