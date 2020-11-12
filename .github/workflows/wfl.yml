@@ -5,7 +5,10 @@ on:
 jobs:
   my_first_job:
     runs-on: ubuntu:latest
-    id: hello
-    uses: ./actions-a
-    with:
-      first_value: 'first test'
+    name: A job to test
+    steps:
+      - name: test action
+        id: hello
+        uses: ./actions-a
+        with:
+          - first_value: 'first test'
