@@ -7,10 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to test
     steps:
+      - name: create a file
+        run: mkdir in && echo 'some test to write' > in/text.txt
       - name: chckout code
         uses: actions/checkout@v2
       - name: test action
         id: hello
         uses: ./actions-a
         with:
-          first_value: 'first test'
+          in_path: 'in'
+          out_path: 'out'

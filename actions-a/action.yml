@@ -2,12 +2,16 @@ name: 'Hello'
 description: 'My first action'
 
 inputs:
-  first_value:
-    description: 'First input value'
+  in_path:
+    description: 'in path'
+    required: true
+  out_path:
+    description: 'out path'
     required: true
 
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.first_value }}
+    - ${{ inputs.in_path }}
+    - - ${{ inputs.out_path }}
