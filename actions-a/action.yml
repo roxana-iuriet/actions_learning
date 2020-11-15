@@ -5,7 +5,7 @@ inputs:
   input_file:
     description: 'input file'
     required: true
-  output_path:
+  output_file:
     description: 'out path'
     required: true
 

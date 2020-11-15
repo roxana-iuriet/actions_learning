@@ -19,7 +19,7 @@ jobs:
         uses: ./actions-a
         with:
           input_file: ./test.txt
-          output_path: ./test2.txt
+          output_file: ./test2.txt
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
