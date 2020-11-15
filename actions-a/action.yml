@@ -2,16 +2,13 @@ name: 'Hello'
 description: 'My first action'
 
 inputs:
-  in_path:
-    description: 'in path'
+  input_file:
+    description: 'input file'
     required: true
-  out_path:
+  output_path:
     description: 'out path'
     required: true
 
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.in_path }}
-    - ${{ inputs.out_path }}

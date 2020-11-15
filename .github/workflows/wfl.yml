@@ -2,9 +2,6 @@ name: test action
 on:
   push
 
-env:
-  IN_PATH: in/text.txt
-  OUT_PATH: out/text2.txt
 
 jobs:
   my_first_job:
@@ -12,12 +9,20 @@ jobs:
     name: A job to test
     steps:
       - name: create a file
-        run: mkdir in && mkdir out && echo 'some test to write' > ${{env.IN_PATH}}
+        run: echo 'hello test' > test.txt
+
       - name: chckout code
         uses: actions/checkout@v2
+
       - name: test action
         id: hello
         uses: ./actions-a
         with:
-          in_path: ${{github.workspace}}/${{env.IN_PATH}}
-          out_path: ${{env.OUT_PATH}}
+          input_file: ./test.txt
+          out_path: ./test2.txt
+
+      - name: Upload artifacts
+          uses: actions/upload-artifact@v2
+          with:
+            name: Example txt
+            path: ./test2.txt
