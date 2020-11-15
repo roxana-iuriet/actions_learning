@@ -22,7 +22,7 @@ jobs:
           out_path: ./test2.txt
 
       - name: Upload artifacts
-          uses: actions/upload-artifact@v2
-          with:
-            name: Example txt
-            path: ./test2.txt
+        uses: actions/upload-artifact@v2
+        with:
+          name: Example txt
+          path: ./test2.txt
